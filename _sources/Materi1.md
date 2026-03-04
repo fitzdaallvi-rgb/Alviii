@@ -1,5 +1,7 @@
 #Materi 1
+
 ##PERSAMAAN LINIER
+
 **APA YANG DIMAKSUD PERSAMAAN LINEAR?**
 
 Secara matematis, persamaan linear adalah sebuah persamaan yang memiliki derajat(pangkat) tertinggi satu. Jika sebuah persamaan memiliki variabel x atau y, maka variabel tersebut tidak boleh memiliki pangkat selain satu(misal:x^2,x^3, dst tidak diperbolehkan.
