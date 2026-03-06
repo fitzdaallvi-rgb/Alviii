@@ -35,13 +35,12 @@ Persamaan linear memiliki sifat-sifat unik yang membedakannya dari persamaan non
 $$f:3x + 4y = 24$$
 $$g:5x - 2y = 14$$
 
-<img src="persamaan_linear_1.png" width="600">
+<img src="materi/persamaan_linear_1.png" width="600">
 
 $$f:3x + 2y = 10$$
 $$g:2x + 5y = 14$$
 
-<img src="persamaan_linear_2.png" width="600">
-
+<img src="materi/persamaan_linear_2.png" width="600">
 
 
 
