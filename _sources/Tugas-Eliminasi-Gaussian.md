@@ -1,8 +1,8 @@
-# Tugas Eliminasi Gaussian
+**Tugas Eliminasi Gaussian**
 
 ## Persamaan Linier
 
-### Soal
+Soal
 
 Diberikan sistem persamaan linear dengan lima variabel berikut:
 
@@ -18,7 +18,7 @@ $$
 $$
 
 
-### Matriks Augmented
+## Matriks Augmented
 
 Sistem persamaan di atas dapat dituliskan dalam bentuk matriks augmented sebagai berikut:
 
@@ -210,7 +210,7 @@ Penjelasan:
 3. Kedua elemen tersebut dinolkan dengan mengurangi kelipatan dari baris 3.
 
 
-### Hasil Penyelesaian
+## Hasil Penyelesaian
 
 Dari baris terakhir diperoleh:
 
@@ -243,7 +243,7 @@ x_1 = 1
 $$
 
 
-### Sage cell
+## Sage cell
 
 
 ![Sage Cell](grafik/sage_cell.png)
