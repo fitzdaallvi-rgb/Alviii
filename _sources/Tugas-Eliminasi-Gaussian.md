@@ -1,5 +1,3 @@
-**Tugas Eliminasi Gaussian**
-
 ## Persamaan Linier
 
 Soal
