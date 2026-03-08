@@ -413,10 +413,10 @@ document.write(`
 \[\begin{split}
 \begin{cases}
 0x_1 + 0x_2 + 2x_3 + 0x_4 + 3x_5 = 21 \\
-2x_1 + 1x_2 + x_3 + 0x_4 + 0x_5 = 7 \\
-0x_1 + 0x_2 + 1x_3 + 0x_4 + 0x_5 = 3 \\
+2x_1 + x_2 + x_3 + 0x_4 + 0x_5 = 7 \\
+0x_1 + 0x_2 + x_3 + 0x_4 + 0x_5 = 3 \\
 2x_1 + 0x_2 + 4x_3 + x_4 + x_5 = 23 \\
-1x_1 + 2x_2 + x_3 + 0x_4 + x_5 = 13
+x_1 + 2x_2 + x_3 + 0x_4 + x_5 = 13
 \end{cases}
 \end{split}\]</div>
 </section>
@@ -468,8 +468,8 @@ R₁ ↔ R₂
 </section>
 <section id="langkah-2-nolkan-elemen-di-bawah-pivot-kolom-1">
 <h3>Langkah 2: Nolkan elemen di bawah pivot kolom 1<a class="headerlink" href="#langkah-2-nolkan-elemen-di-bawah-pivot-kolom-1" title="Link to this heading">#</a></h3>
-<p>Pivot berada pada kolom 1 baris 1 (angka 2).
-Selanjutnya kita membuat elemen di bawahnya menjadi 0.</p>
+<p>Pivot berada pada baris 1 kolom 1 dengan nilai 2.
+Elemen di bawah pivot harus dinolkan.</p>
 <p>Operasi baris:</p>
 <div class="math notranslate nohighlight">
 \[
@@ -485,7 +485,7 @@ R_5 \leftarrow R_5 - \frac{1}{2}R_1
 \left[
 \begin{array}{ccccc|c}
 0 &amp; 0 &amp; 6 &amp; 0 &amp; 15 &amp; 21 \\
-2 &amp; 2 &amp; 3 &amp; 0 &amp; 0 &amp; 7 \\
+2 &amp; 2 &amp; 3 &amp; 0 &amp; 3 &amp; 7 \\
 0 &amp; 0 &amp; 3 &amp; 0 &amp; 0 &amp; 3 \\
 2 &amp; 0 &amp; 12 &amp; 4 &amp; 5 &amp; 23 \\
 1 &amp; 4 &amp; 3 &amp; 0 &amp; 5 &amp; 13
@@ -494,8 +494,7 @@ R_5 \leftarrow R_5 - \frac{1}{2}R_1
 \end{split}\]</div>
 <p>Penjelasan:</p>
 <ol class="arabic simple">
-<li><p>Pivot pertama berada pada kolom 1 baris 1 dengan nilai 2.</p></li>
-<li><p>Pada baris 4 kolom 1 terdapat angka 2 sehingga harus dinolkan.</p></li>
+<li><p>Pivot pertama berada pada kolom 1 baris 1 dengan nilai 2. Pada baris 4 kolom 1 terdapat angka 2 sehingga harus dinolkan.</p></li>
 <li><p>Nilai tersebut dinolkan dengan mengurangi baris 4 dengan baris 1.</p></li>
 <li><p>Pada baris 5 kolom 1 terdapat angka 1, sehingga dinolkan dengan mengurangi setengah dari baris 1.</p></li>
 </ol>
@@ -561,20 +560,22 @@ R_4 \leftarrow R_4 + \frac{2}{3}R_2
 <p>Pivot ketiga berada pada baris 3 kolom 3 (angka 3).</p>
 <p>Operasi baris:</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}
-\begin{aligned}
-R_4 &amp;\leftarrow R_4 - \frac{10}{3}R_3 \\
-R_5 &amp;\leftarrow R_5 - 2R_3
-\end{aligned}
-\end{split}\]</div>
+\[
+R_4 \leftarrow R_4 - \frac{10}{3}R_3
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+R_5 \leftarrow R_5 - 2R3
+\]</div>
 <p>Matriks menjadi:</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}
-\begin{aligned}
-R_4 &amp;\leftarrow R_4 - \frac{10}{3}R_3 \\
-R_5 &amp;\leftarrow R_5 - 2R_3
-\end{aligned}
-\end{split}\]</div>
+\[
+R_4 \leftarrow R_4 - \frac{10}{3}R_3
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+R_5 \leftarrow R_5 - 2R3
+\]</div>
 <p>Penjelasan:</p>
 <ol class="arabic simple">
 <li><p>Pivot ketiga berada pada baris 3 kolom 3.</p></li>
@@ -590,10 +591,10 @@ R_5 &amp;\leftarrow R_5 - 2R_3
 \[
 15x_5 = 15
 \]</div>
-<p>sehingga</p>
+<p>Sehingga</p>
 <div class="math notranslate nohighlight">
 \[
-x_5 = 1
+x5 = 1
 \]</div>
 <p>Kemudian dilakukan substitusi ke atas sehingga diperoleh:</p>
 <div class="math notranslate nohighlight">
@@ -700,7 +701,7 @@ x_1 = 1
   <div class="footer-item">
     
 <p class="component-author">
-By The Jupyter Book Community
+By FAIZATUL ALVI WIDDA
 </p>
 
   </div>

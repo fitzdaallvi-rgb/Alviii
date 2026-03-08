@@ -12,10 +12,10 @@ Diberikan sistem persamaan linear dengan lima variabel berikut:
 $$
 \begin{cases}
 0x_1 + 0x_2 + 2x_3 + 0x_4 + 3x_5 = 21 \\
-2x_1 + 1x_2 + x_3 + 0x_4 + 0x_5 = 7 \\
-0x_1 + 0x_2 + 1x_3 + 0x_4 + 0x_5 = 3 \\
+2x_1 + x_2 + x_3 + 0x_4 + 0x_5 = 7 \\
+0x_1 + 0x_2 + x_3 + 0x_4 + 0x_5 = 3 \\
 2x_1 + 0x_2 + 4x_3 + x_4 + x_5 = 23 \\
-1x_1 + 2x_2 + x_3 + 0x_4 + x_5 = 13
+x_1 + 2x_2 + x_3 + 0x_4 + x_5 = 13
 \end{cases}
 $$
 
@@ -76,8 +76,8 @@ Penjelasan:
 
 ### Langkah 2: Nolkan elemen di bawah pivot kolom 1
 
-Pivot berada pada kolom 1 baris 1 (angka 2).
-Selanjutnya kita membuat elemen di bawahnya menjadi 0.
+Pivot berada pada baris 1 kolom 1 dengan nilai 2.
+Elemen di bawah pivot harus dinolkan.
 
 Operasi baris:
 
@@ -96,7 +96,7 @@ $$
 \left[
 \begin{array}{ccccc|c}
 0 & 0 & 6 & 0 & 15 & 21 \\
-2 & 2 & 3 & 0 & 0 & 7 \\
+2 & 2 & 3 & 0 & 3 & 7 \\
 0 & 0 & 3 & 0 & 0 & 3 \\
 2 & 0 & 12 & 4 & 5 & 23 \\
 1 & 4 & 3 & 0 & 5 & 13
@@ -106,9 +106,7 @@ $$
 
 Penjelasan:
 
-1. Pivot pertama berada pada kolom 1 baris 1 dengan nilai 2.
-
-2. Pada baris 4 kolom 1 terdapat angka 2 sehingga harus dinolkan.
+1. Pivot pertama berada pada kolom 1 baris 1 dengan nilai 2. Pada baris 4 kolom 1 terdapat angka 2 sehingga harus dinolkan.
 
 3. Nilai tersebut dinolkan dengan mengurangi baris 4 dengan baris 1.
 
@@ -188,21 +186,25 @@ Pivot ketiga berada pada baris 3 kolom 3 (angka 3).
 Operasi baris:
 
 $$
-\begin{aligned}
-R_4 &\leftarrow R_4 - \frac{10}{3}R_3 \\
-R_5 &\leftarrow R_5 - 2R_3
-\end{aligned}
+R_4 \leftarrow R_4 - \frac{10}{3}R_3
 $$
+
+$$
+R_5 \leftarrow R_5 - 2R3
+$$
+
 
 Matriks menjadi:
 
+$$
+R_4 \leftarrow R_4 - \frac{10}{3}R_3
+$$
 
 $$
-\begin{aligned}
-R_4 &\leftarrow R_4 - \frac{10}{3}R_3 \\
-R_5 &\leftarrow R_5 - 2R_3
-\end{aligned}
+R_5 \leftarrow R_5 - 2R3
 $$
+
+
 
 Penjelasan:
 1. Pivot ketiga berada pada baris 3 kolom 3.
@@ -220,10 +222,10 @@ $$
 15x_5 = 15
 $$
 
-sehingga
+Sehingga 
 
 $$
-x_5 = 1
+x5 = 1
 $$
 
 Kemudian dilakukan substitusi ke atas sehingga diperoleh:
