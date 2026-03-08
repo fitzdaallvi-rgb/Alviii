@@ -1,3 +1,7 @@
+# Tugas Eliminasi Gaussian
+
+
+
 ## Persamaan Linier
 
 Soal
@@ -245,5 +249,3 @@ $$
 
 
 ![Sage Cell](grafik/sage_cell.png)
-
-
