@@ -1,8 +1,8 @@
-## Tugas Eliminasi Gaussian
+# Tugas Eliminasi Gaussian
 
-**Persamaan Linier**
+## Persamaan Linier
 
-Soal
+### Soal
 
 Diberikan sistem persamaan linear dengan lima variabel berikut:
 
@@ -18,7 +18,7 @@ $$
 $$
 
 
-**Matriks Augmented**
+### Matriks Augmented
 
 Sistem persamaan di atas dapat dituliskan dalam bentuk matriks augmented sebagai berikut:
 
@@ -36,9 +36,9 @@ $$
 $$
 
 
-**Eliminasi Gaussian**
+## Eliminasi Gaussian
 
-*Langkah 1: Menentukan pivot pertama*
+### Langkah 1: Menentukan pivot pertama
 
 Elemen pada baris pertama kolom pertama bernilai 0 sehingga tidak dapat dijadikan pivot. Oleh karena itu baris pertama ditukar dengan baris kedua.
 
@@ -72,7 +72,7 @@ Penjelasan:
 3. Baris kedua memiliki nilai 2, sehingga baris pertama dan baris kedua ditukar.
 
 
-*Langkah 2: Nolkan elemen di bawah pivot kolom 1*
+### Langkah 2: Nolkan elemen di bawah pivot kolom 1*
 
 Pivot berada pada kolom 1 baris 1 (angka 2).
 Selanjutnya kita membuat elemen di bawahnya menjadi 0.
@@ -113,7 +113,7 @@ Penjelasan:
 4. Pada baris 5 kolom 1 terdapat angka 1, sehingga dinolkan dengan mengurangi setengah dari baris 1.
 
 
-*Langkah 3: Menentukan pivot kolom 2*
+### Langkah 3: Menentukan pivot kolom 2
 
 Karena elemen pada baris 2 kolom 2 = 0, maka kita menukar baris kedua dengan baris kelima.
 
@@ -146,7 +146,7 @@ Penjelasan:
 3. Pada baris 5 kolom 2 terdapat angka 3, sehingga baris kedua ditukar dengan baris kelima.
 
 
-*Langkah 4: Nolkan elemen di bawah pivot kolom 2*
+### Langkah 4: Nolkan elemen di bawah pivot kolom 2
 
 Pivot kedua berada pada baris 2 kolom 2 (nilai 3).
 
@@ -179,7 +179,7 @@ Penjelasan:
 3. Untuk menolkan angka tersebut kita menambahkan 2/3 kali baris 2 ke baris 4.
 
 
-*Langkah 5: Nolkan elemen di bawah pivot kolom 3*
+### Langkah 5: Nolkan elemen di bawah pivot kolom 3
 
 Pivot ketiga berada pada baris 3 kolom 3 (angka 3).
 
@@ -210,7 +210,7 @@ Penjelasan:
 3. Kedua elemen tersebut dinolkan dengan mengurangi kelipatan dari baris 3.
 
 
-**Hasil Penyelesaian**
+### Hasil Penyelesaian
 
 Dari baris terakhir diperoleh:
 
@@ -243,7 +243,7 @@ x_1 = 1
 $$
 
 
-**Sage cell**
+### Sage cell
 
 
 ![Sage Cell](grafik/sage_cell.png)
