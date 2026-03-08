@@ -74,7 +74,7 @@ Penjelasan:
 3. Baris kedua memiliki nilai 2, sehingga baris pertama dan baris kedua ditukar.
 
 
-### Langkah 2: Nolkan elemen di bawah pivot kolom 1*
+### Langkah 2: Nolkan elemen di bawah pivot kolom 1
 
 Pivot berada pada kolom 1 baris 1 (angka 2).
 Selanjutnya kita membuat elemen di bawahnya menjadi 0.
