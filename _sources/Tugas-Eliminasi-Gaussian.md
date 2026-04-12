@@ -1,251 +1,127 @@
-# Tugas Eliminasi Gaussian
+# Tugas ELiminasi Gaussan
 
+## 1. SPL (Sistem Persamaan Linear) 
 
+$$\begin{cases}
+1x_1 + 0x_2 + 0x_3 + 0x_4 + 0x_5 = 1 \\
+2x_1 + 1x_2 + 0x_3 + 0x_4 + 0x_5 = 4 \\
+0x_1 + 3x_2 + 1x_3 + 0x_4 + 0x_5 = 9 \\
+0x_1 + 0x_2 + 4x_3 + 1x_4 + 0x_5 = 16 \\
+0x_1 + 0x_2 + 0x_3 + 5x_4 + 1x_5 = 25
+\end{cases}$$
 
-## Persamaan Linier
+## 2. Matriks Augmented 
 
-Soal
-
-Diberikan sistem persamaan linear dengan lima variabel berikut:
-
-
-$$
-\begin{cases}
-0x_1 + 0x_2 + 2x_3 + 0x_4 + 3x_5 = 21 \\
-2x_1 + 1x_2 + x_3 + 0x_4 + 0x_5 = 7 \\
-0x_1 + 0x_2 + 1x_3 + 0x_4 + 0x_5 = 3 \\
-2x_1 + 0x_2 + 4x_3 + x_4 + x_5 = 23 \\
-1x_1 + 2x_2 + x_3 + 0x_4 + x_5 = 13
-\end{cases}
-$$
-
-
-## Matriks Augmented
-
-Sistem persamaan di atas dapat dituliskan dalam bentuk matriks augmented sebagai berikut:
-
-
-$$
-\left[
+$$\left[
 \begin{array}{ccccc|c}
-0 & 0 & 6 & 0 & 15 & 21 \\
-2 & 2 & 3 & 0 & 0 & 7 \\
-0 & 0 & 3 & 0 & 0 & 3 \\
-2 & 0 & 12 & 4 & 5 & 23 \\
-1 & 4 & 3 & 0 & 5 & 13
+1 & 0 & 0 & 0 & 0 & 1 \\
+2 & 1 & 0 & 0 & 0 & 4 \\
+1 & 3 & 1 & 0 & 0 & 9 \\
+1 & 0 & 4 & 1 & 0 & 16 \\
+1 & 0 & 0 & 5 & 1 & 25
 \end{array}
-\right]
-$$
+\right]$$
 
+## 3. Eliminasi Gauss (OBE) 
 
-## Eliminasi Gaussian
+### Langkah 1: nolkan elemen di bawah pivot kolom 1 
 
-### Langkah 1: Menentukan pivot pertama
-
-Elemen pada baris pertama kolom pertama bernilai 0 sehingga tidak dapat dijadikan pivot. Oleh karena itu baris pertama ditukar dengan baris kedua.
-
-Operasi baris: 
-
-$$
-R₁ ↔ R₂
-$$
-
-Matriks menjadi:
-
-
-$$
-\left[
-\begin{array}{ccccc|c}
-0 & 0 & 6 & 0 & 15 & 21 \\
-2 & 2 & 3 & 0 & 0 & 7 \\
-0 & 0 & 3 & 0 & 0 & 3 \\
-2 & 0 & 12 & 4 & 5 & 23 \\
-1 & 4 & 3 & 0 & 5 & 13
-\end{array}
-\right]
-$$
+Operasi baris: $$R_2 \leftarrow R_2 - 2R_1$$
 
 Penjelasan:
 
-1. Pivot pertama dicari pada kolom 1.
+1.  Pivot pertama ada di kolom 1 baris 1 (angka 1).
 
-2. Baris pertama memiliki nilai 0, sehingga tidak bisa dijadikan pivot.
+2.  Di bawahnya (baris 2 kolom 1) ada angka 2.
 
-3. Baris kedua memiliki nilai 2, sehingga baris pertama dan baris kedua ditukar.
+3.  Kita ingin membuat elemen tersebut menjadi 0.
 
+4.  Caranya dengan mengurangkan 2 kali baris 1 dari baris 2.
 
-### Langkah 2: Nolkan elemen di bawah pivot kolom 1
-
-Pivot berada pada kolom 1 baris 1 (angka 2).
-Selanjutnya kita membuat elemen di bawahnya menjadi 0.
-
-Operasi baris:
-
-$$
-R_4 \leftarrow R_4 - R_1
-$$
-
-$$
-R_5 \leftarrow R_5 - \frac{1}{2}R_1
-$$
-
-Matriks menjadi:
-
-
-$$
-\left[
+$$\left[
 \begin{array}{ccccc|c}
-0 & 0 & 6 & 0 & 15 & 21 \\
-2 & 2 & 3 & 0 & 0 & 7 \\
-0 & 0 & 3 & 0 & 0 & 3 \\
-2 & 0 & 12 & 4 & 5 & 23 \\
-1 & 4 & 3 & 0 & 5 & 13
+1 & 0 & 0 & 0 & 0 & 1 \\
+0 & 1 & 0 & 0 & 0 & 2 \\
+1 & 3 & 1 & 0 & 0 & 9 \\
+1 & 0 & 4 & 1 & 0 & 16 \\
+1 & 0 & 0 & 5 & 1 & 25
 \end{array}
-\right]
-$$
+\right]$$
+
+### Langkah 2: nolkan elemen di bawah pivot kolom 2 
+
+Operasi baris: $$R_3 \leftarrow R_3 - 3R_2$$
 
 Penjelasan:
 
-1. Pivot pertama berada pada kolom 1 baris 1 dengan nilai 2.
+1.  Pivot kedua ada di kolom 2 baris 2 (angka 1).
 
-2. Pada baris 4 kolom 1 terdapat angka 2 sehingga harus dinolkan.
+2.  Di bawahnya (baris 3 kolom 2) ada angka 3.
 
-3. Nilai tersebut dinolkan dengan mengurangi baris 4 dengan baris 1.
+3.  Kita membuat elemen tersebut menjadi 0 dengan mengurangkan 3 kali
+    baris 2.
 
-4. Pada baris 5 kolom 1 terdapat angka 1, sehingga dinolkan dengan mengurangi setengah dari baris 1.
-
-
-### Langkah 3: Menentukan pivot kolom 2
-
-Karena elemen pada baris 2 kolom 2 = 0, maka kita menukar baris kedua dengan baris kelima.
-
-Operasi baris:
-
-$$
-R_2 \leftrightarrow R_5
-$$
-
-Matriks menjadi:
-
-
-$$
-\left[
+$$\left[
 \begin{array}{ccccc|c}
-2 & 2 & 3 & 0 & 0 & 7 \\
-0 & 3 & 1.5 & 0 & 5 & 9.5 \\
-0 & 0 & 3 & 0 & 0 & 3 \\
-0 & -2 & 9 & 4 & 5 & 16 \\
-0 & 0 & 6 & 0 & 15 & 21
+1 & 0 & 0 & 0 & 0 & 1 \\
+0 & 1 & 0 & 0 & 0 & 2 \\
+1 & 0 & 1 & 0 & 0 & 3 \\
+1 & 0 & 4 & 1 & 0 & 16 \\
+1 & 0 & 0 & 5 & 1 & 25
 \end{array}
-\right]
-$$
+\right]$$
+
+### Langkah 3: nolkan elemen di bawah pivot kolom 3 
+
+Operasi baris: $$R_4 \leftarrow R_4 - 4R_3$$
 
 Penjelasan:
-1. Pivot kedua harus berada pada kolom 2.
 
-2. Elemen pada baris 2 kolom 2 bernilai 0, sehingga tidak bisa dijadikan pivot.
+1.  Pivot ketiga ada di kolom 3 baris 3 (angka 1).
 
-3. Pada baris 5 kolom 2 terdapat angka 3, sehingga baris kedua ditukar dengan baris kelima.
+2.  Di bawahnya (baris 4 kolom 3) ada angka 4.
 
+3.  Elemen tersebut dinolkan dengan mengurangkan 4 kali baris 3.
 
-### Langkah 4: Nolkan elemen di bawah pivot kolom 2
-
-Pivot kedua berada pada baris 2 kolom 2 (nilai 3).
-
-Operasi baris:
-
-$$
-R_4 \leftarrow R_4 + \frac{2}{3}R_2
-$$
-
-Matriks menjadi:
-
-
-$$
-\left[
+$$\left[
 \begin{array}{ccccc|c}
-2 & 2 & 3 & 0 & 0 & 7 \\
-0 & 3 & 1.5 & 0 & 5 & 9.5 \\
-0 & 0 & 3 & 0 & 0 & 3 \\
-0 & 0 & 10 & 4 & \frac{25}{3} & \frac{67}{3} \\
-0 & 0 & 6 & 0 & 15 & 21
+1 & 0 & 0 & 0 & 0 & 1 \\
+0 & 1 & 0 & 0 & 0 & 2 \\
+1 & 0 & 1 & 0 & 0 & 3 \\
+1 & 0 & 0 & 1 & 0 & 4 \\
+1 & 0 & 0 & 5 & 1 & 25
 \end{array}
-\right]
-$$
+\right]$$
+
+### Langkah 4: nolkan elemen di bawah pivot kolom 4 
+
+Operasi baris: $$R_5 \leftarrow R_5 - 5R_4$$
 
 Penjelasan:
-1. Pivot kedua berada pada baris 2 kolom 2.
 
-2. Di bawah pivot terdapat angka -2 pada baris 4 kolom 2.
+1.  Pivot keempat ada di kolom 4 baris 4 (angka 1).
 
-3. Untuk menolkan angka tersebut kita menambahkan 2/3 kali baris 2 ke baris 4.
+2.  Di bawahnya (baris 5 kolom 4) ada angka 5.
 
+3.  Elemen tersebut dibuat nol dengan mengurangkan 5 kali baris 4.
 
-### Langkah 5: Nolkan elemen di bawah pivot kolom 3
+$$\left[
+    \begin{array}{ccccc|c}
+    1 & 0 & 0 & 0 & 0 & 1 \\
+    0 & 1 & 0 & 0 & 0 & 2 \\
+    1 & 0 & 1 & 0 & 0 & 3 \\
+    1 & 0 & 0 & 1 & 0 & 4 \\
+    1 & 0 & 0 & 0 & 1 & 5
+    \end{array}
+    \right]$$$$
 
-Pivot ketiga berada pada baris 3 kolom 3 (angka 3).
+## Hasil Akhir 
 
-Operasi baris:
-
-$$
-\begin{aligned}
-R_4 &\leftarrow R_4 - \frac{10}{3}R_3 \\
-R_5 &\leftarrow R_5 - 2R_3
-\end{aligned}
-$$
-
-Matriks menjadi:
-
-
-$$
-\begin{aligned}
-R_4 &\leftarrow R_4 - \frac{10}{3}R_3 \\
-R_5 &\leftarrow R_5 - 2R_3
-\end{aligned}
-$$
-
-Penjelasan:
-1. Pivot ketiga berada pada baris 3 kolom 3.
-
-2. Di bawah pivot terdapat angka 10 pada baris 4 dan 6 pada baris 5.
-
-3. Kedua elemen tersebut dinolkan dengan mengurangi kelipatan dari baris 3.
+$$x_1 = 1,\quad x_2 = 2,\quad x_3 = 3,\quad x_4 = 4,\quad x_5 = 5$$
 
 
-## Hasil Penyelesaian
+## SAGE CELL
 
-Dari baris terakhir diperoleh:
+![original image](https://cdn.mathpix.com/snip/images/aeU_3-oDook_mnKKIv2FYWNZY-_fwbTFVqVEcXw9jo4.original.fullsize.png)
 
-$$
-15x_5 = 15
-$$
-
-sehingga
-
-$$
-x_5 = 1
-$$
-
-Kemudian dilakukan substitusi ke atas sehingga diperoleh:
-
-$$
-x_4 = 1
-$$
-
-$$
-x_3 = 1
-$$
-
-$$
-x_2 = 1
-$$
-
-$$
-x_1 = 1
-$$
-
-
-## Sage cell
-
-
-![Sage Cell](grafik/sage_cell.png)
+Kesimpulan: Eliminasi Gauss adalah metode efisien untuk menyelesaikan sistem persamaan linear (SPL) dengan mengubah matriks diperbesar menjadi bentuk eselon baris (segitiga atas) menggunakan operasi baris elementer. Proses ini diakhiri dengan substitusi balik untuk mendapatkan solusi, menjadikannya metode sistematis yang ampuh.
