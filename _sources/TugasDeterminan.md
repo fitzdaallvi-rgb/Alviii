@@ -234,3 +234,12 @@ $
 $
 A^{-1} = \text{adj}(A)
 $
+
+
+$
+\begin{bmatrix}
+235\\
+432\\
+754\\
+\end{bmatrix}
+$
